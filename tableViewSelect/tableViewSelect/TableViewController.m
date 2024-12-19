@@ -70,6 +70,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     cell.textLabel.text = [NSString stringWithFormat:@"第%zi组,第%zi行",indexPath.section+1,indexPath.row];
     
@@ -104,15 +105,16 @@
         //当前选择的打钩
         UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        
     }else{ //多选
         UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        if (cell.accessoryType == UITableViewCellAccessoryCheckmark) { //如果为选中状态
-            cell.accessoryType = UITableViewCellAccessoryNone; //切换为未选中
-            [self.selectIndexs removeObject:indexPath]; //数据移除
-        }else { //未选中
-            cell.accessoryType = UITableViewCellAccessoryCheckmark; //切换为选中
-            [self.selectIndexs addObject:indexPath]; //添加索引数据到数组
+        if ([self.selectIndexs containsObject:indexPath]) {
+            // 如果当前行已被选中
+            cell.accessoryType = UITableViewCellAccessoryNone; // 切换为未选中
+            [self.selectIndexs removeObject:indexPath]; // 数据移除
+        } else {
+            // 如果当前行未被选中
+            cell.accessoryType = UITableViewCellAccessoryCheckmark; // 切换为选中
+            [self.selectIndexs addObject:indexPath]; // 添加索引数据到数组
         }
     }
 }

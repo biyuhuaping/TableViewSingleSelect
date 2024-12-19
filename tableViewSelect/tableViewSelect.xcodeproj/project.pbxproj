@@ -112,7 +112,7 @@
 				TargetAttributes = {
 					951238061F13C4A2002DF28F = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 8SEZT6X2P9;
+						DevelopmentTeam = XAS28YW9D6;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -122,6 +122,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -269,10 +270,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8SEZT6X2P9;
+				DEVELOPMENT_TEAM = XAS28YW9D6;
 				INFOPLIST_FILE = tableViewSelect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zzf.com.tableViewSelect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zb.tableViewSelect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -281,10 +282,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8SEZT6X2P9;
+				DEVELOPMENT_TEAM = XAS28YW9D6;
 				INFOPLIST_FILE = tableViewSelect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zzf.com.tableViewSelect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zb.tableViewSelect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -308,6 +309,7 @@
 				951238201F13C4A2002DF28F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
